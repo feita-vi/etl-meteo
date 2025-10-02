@@ -11,7 +11,7 @@ DB = os.getenv("MYSQL_DB")
 
 engine = create_engine(f"mysql+pymysql://{USER}:{PASSWORD}@{HOST}")
 
-print(f"************{engine}")
+
 with engine.connect() as conn:
 
     conn.execute(text(f"CREATE DATABASE IF NOT EXISTS {DB}"))
