@@ -24,5 +24,5 @@ df = pd.read_sql("SELECT * FROM meteo", engine)
 st.subheader("📊 Dernières données")
 st.write(df.tail())
 
-st.subheader("📈 Température et humidité dans le temps")
+st.subheader("📈 Evolution température et humidité")
 st.line_chart(df[["temperature", "humidite"]])
